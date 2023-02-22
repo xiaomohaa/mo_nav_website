@@ -59,6 +59,20 @@ $("a.smooth").click(function (e) {
   href = $(this).attr("href");
   pos = $(href).position().top - 30;
 });
+
+var _paq = window._paq = window._paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+  var u="//matomo.xiaomohaa.cn/";
+  _paq.push(['setTrackerUrl', u+'matomo.php']);
+  _paq.push(['setSiteId', '2']);
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+})();
+
+
 (function () {
   if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
     if (new Date().getHours() > 22 || new Date().getHours() < 6) {
